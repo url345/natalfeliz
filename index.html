@@ -42,7 +42,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:20px 0;color:var
 .sum .row{display:flex;justify-content:space-between;padding:3px 0;font-size:14px}.sum .tt{border-top:1px solid var(--line);margin-top:4px;padding-top:8px;font-size:17px;font-weight:800}.sum .tt b{color:var(--yd)}
 .mini{display:flex;align-items:center;gap:10px;margin-top:6px}.mini button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font-size:18px;cursor:pointer}
 .spn{display:inline-block;width:12px;height:12px;border:2px solid var(--line);border-top-color:var(--y);border-radius:50%;animation:rt .8s linear infinite;margin-right:6px;vertical-align:-1px}@keyframes rt{to{transform:rotate(360deg)}}.trust{display:flex;gap:14px;flex-wrap:wrap;color:var(--mut);font-size:12px;margin-top:12px}
-.ckh .logo{font-size:13px}.wa{position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:40;background:#25d366;color:#04230f;font-weight:800;padding:12px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)}@media(min-width:760px){.wa{bottom:20px}}.btn:disabled{opacity:.4;cursor:not-allowed}.pixline{font-size:13px;color:var(--mut);margin:2px 0 10px}.sec .fg+.fg{margin-top:8px}@media(max-width:819px){.sum{order:-1}}@media(max-width:759px){.gal{margin:0 -18px}.pic{border-radius:0;border-left:0;border-right:0}.grid{padding-top:0}}</style></head><body>
+.ckh .logo{font-size:13px}.wa{position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:40;background:#25d366;color:#04230f;font-weight:800;padding:12px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)}@media(min-width:760px){.wa{bottom:20px}}.btn:disabled{opacity:.4;cursor:not-allowed}.pixline{font-size:13px;background:#e8f7f5;border:1px solid #bfe9e4;color:#0f6b61;border-radius:10px;padding:10px 12px;margin:2px 0 10px}.pixgo{background:#32bcad;color:#fff}.pixcard{text-align:center}.pixhead{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px;text-align:left}.pixlogo{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:#32bcad;color:#fff;font-size:22px}.pixhead b{display:block;font-size:18px}.pixhead small{color:var(--mut);font-size:14px}.qrbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;display:inline-block;margin-bottom:14px}.qrbox img{width:220px;height:220px;display:block}.pxl{display:block;text-align:left;font-size:12px;color:var(--mut);margin-bottom:4px}.cprow{display:flex;gap:8px}.cprow input{flex:1;min-width:0;background:#fff;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.pixbtn{width:auto;flex:none;padding:11px 20px;background:#32bcad;color:#fff}.cpok{margin:10px 0 0;background:#e6f6ef;color:#157347;border:1px solid #b7e4cf;border-radius:10px;padding:10px;font-size:14px;font-weight:600}.sec .fg+.fg{margin-top:8px}@media(max-width:819px){.sum{order:-1}}@media(max-width:759px){.gal{margin:0 -18px}.pic{border-radius:0;border-left:0;border-right:0}.grid{padding-top:0}}</style></head><body>
 
 <main class="wrap">
 <div class="grid">
@@ -85,12 +85,19 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:20px 0;color:var
 <div id="ck" hidden><div class="ckh"><button onclick="closeCk()">‹ Voltar</button><span style="color:var(--mut);font-size:13px">🔒 Seguro</span></div>
 <div class="ckg" id="ckm"><div>
 <div class="sec"><div class="fg" id="s1"></div><div class="fg" id="s2"></div><div class="fg" id="s3"></div></div>
-<div class="pixline">◈ Pagamento por Pix: você recebe o QR Code e o copia e cola.</div>
-<button class="btn" onclick="ckGo()">Pagar com Pix</button></div>
+<div class="pixline">◈ Pagamento via Pix. Na próxima tela você recebe o QR Code e o copia e cola.</div>
+<button class="btn pixgo" onclick="ckGo()">◈ Pagar com Pix</button></div>
 <aside class="sum sec"><div class="it"><img id="cth" alt=""><div><b>Cortina de LED 3x3 m – 300 LEDs</b><div class="mini"><button onclick="if(n>1){n--;up();ckSum()}">−</button><b id="cq">1</b><button onclick="n++;up();ckSum()">+</button></div></div></div>
 <div class="row"><span>Frete</span><span id="cfr"></span></div>
 <div class="row tt"><span>Total</span><b id="ctot"></b></div></aside></div>
-<div class="ckg" id="ckd" hidden style="max-width:560px"><div class="sec" style="text-align:center"><h2 style="margin:0 0 6px">Pague com Pix</h2><p id="dmsg" style="color:var(--mut);margin:0 0 14px"></p><div id="qrw" style="background:#fff;border-radius:12px;padding:10px;display:inline-block;margin-bottom:12px" hidden><img id="qri" alt="QR Code Pix" style="width:220px;height:220px;display:block"></div><div style="display:flex;gap:8px;align-items:center"><input id="pxc" readonly style="flex:1;min-width:0;background:#ffffff;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:13px;font-size:14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden"><button class="btn" id="cpb" onclick="cpPix()" style="width:auto;padding:13px 18px;flex:none">Copiar</button></div><pre id="raw" style="text-align:left;white-space:pre-wrap;font-size:11px;color:var(--mut);max-height:160px;overflow:auto" hidden></pre><button class="btn alt" onclick="closeCk()" style="margin-top:10px">Voltar à loja</button></div></div></div>
+<div class="ckg" id="ckd" hidden style="max-width:480px"><div class="sec pixcard">
+<div class="pixhead"><span class="pixlogo">◈</span><div><b>Pague com Pix</b><small id="pixval"></small></div></div>
+<div id="qrw" class="qrbox" hidden><img id="qri" alt="QR Code Pix"></div>
+<label class="pxl" id="pxl">Pix copia e cola</label>
+<div class="cprow"><input id="pxc" readonly><button class="btn pixbtn" id="cpb" onclick="cpPix()">Copiar</button></div>
+<div id="cpok" class="cpok" hidden>✓ Código copiado com sucesso</div>
+<pre id="raw" style="text-align:left;white-space:pre-wrap;font-size:11px;color:var(--mut);max-height:160px;overflow:auto" hidden></pre>
+<button class="btn alt" onclick="closeCk()" style="margin-top:14px">Voltar à loja</button></div></div></div>
 <script>
 var $=function(i){return document.getElementById(i)},FRETE=7.5;
 var P=19.90,n=1,PRIMEIRA=true;function gr(){return PRIMEIRA}function f(v){return "R$ "+v.toFixed(2).replace(".",",")}
@@ -131,11 +138,13 @@ fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JS
 function strs(o,a,dp){if(typeof o=="string")a.push(o);else if(o&&typeof o=="object"&&dp<5)for(var k in o)strs(o[k],a,dp+1);return a}
 function showPix(d,ped,amt){var a=strs(d,[],0),code=a.filter(function(s){return /^0002\d\d/.test(s)})[0]||"",im=a.filter(function(s){return /^(data:image|iVBOR|https?:\/\/\S*(qr|png|svg|image))/i.test(s)})[0]||"";
 if(im.indexOf("iVBOR")==0)im="data:image/png;base64,"+im;
-$("dmsg").textContent="Pedido "+ped+" · "+f(amt)+". Abra o app do seu banco, escolha Pix e pague com QR Code ou copia e cola.";
-$("qrw").hidden=!im;if(im)$("qri").src=im;$("pxc").value=code;$("pxc").parentNode.hidden=!code;
+$("pixval").textContent=f(amt);$("cpok").hidden=true;$("cpb").textContent="Copiar";
+$("qrw").hidden=!im;if(im)$("qri").src=im;$("pxc").value=code;$("pxc").parentNode.hidden=!code;$("pxl").hidden=!code;
 $("raw").hidden=!!(code||im);$("raw").textContent=(code||im)?"":"Cobrança criada, mas não identifiquei o código Pix na resposta:\n"+JSON.stringify(d,null,2);
 $("ckm").hidden=true;$("ckd").hidden=false;$("ck").scrollTop=0}
-function cpPix(){var t=$("pxc");t.select();try{navigator.clipboard.writeText(t.value)}catch(e){document.execCommand("copy")}$("cpb").textContent="Copiado ✓"}
+function cpPix(){var t=$("pxc"),ok=function(){t.setSelectionRange(0,0);t.blur();$("cpb").textContent="Copiado ✓";var m=$("cpok");m.hidden=false;clearTimeout(window._ct);window._ct=setTimeout(function(){m.hidden=true;$("cpb").textContent="Copiar"},3500)},old=function(){try{if(document.execCommand("copy"))ok()}catch(e){}};
+t.select();t.setSelectionRange(0,99999);
+if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t.value).then(ok,old);else old()}
 
 (function(){var pic=document.getElementById("pic"),dots=document.getElementById("dots"),first=pic.querySelector("img");
 function mk(){try{var k=first.naturalWidth/720;[].forEach(function(d){var c=document.createElement("canvas");c.width=c.height=600;c.getContext("2d").drawImage(first,d[0]*k,d[1]*k,d[2]*k,d[2]*k,0,0,600,600);var im=new Image();im.src=c.toDataURL("image/jpeg",.85);im.alt="Detalhe do produto";pic.appendChild(im)})}catch(e){}
